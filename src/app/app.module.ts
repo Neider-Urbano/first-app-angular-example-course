@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ImgViewComponent } from './img-view/img-view.component';
 
@@ -15,16 +13,11 @@ import { ImgViewComponent } from './img-view/img-view.component';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    AboutUsComponent,
-    ContactComponent,
     NotFoundComponent,
-    ImgViewComponent
+    ImgViewComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
