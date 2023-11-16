@@ -1,0 +1,14 @@
+<div class="container-profile">
+  <h2>Profile</h2>
+  <p>I am System Engineer and Full Stack Dev</p>
+  <img
+    width="400"
+    alt="Neider Logo"
+    src="https://avatars.githubusercontent.com/u/80359162?s=400&u=6c6750cdcd678d6d8eae27c35d06ead0c3972a66&v=4"
+  />
+  <div class="container-nav-imgs">
+    <button *ngFor="let img of imgs" (click)="goToImg(img.id)">
+      Img {{ img.id }}
+    </button>
+  </div>
+</div>

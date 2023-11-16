@@ -52,38 +52,8 @@
 </div>
 
 <div class="content" role="main">
-  <div class="container-profile">
-    <h2>Profile</h2>
-    <p>I am System Engineer and Full Stack Dev</p>
-    <img
-      width="400"
-      alt="Neider Logo"
-      src="https://avatars.githubusercontent.com/u/80359162?s=400&u=6c6750cdcd678d6d8eae27c35d06ead0c3972a66&v=4"
-    />
-  </div>
-
-  <div class="container-about-me">
-    <h2>About me</h2>
-    <p>System Engineer and Full Stack Dev with experience one year🚀👏🏼🔍.</p>
-  </div>
-
-  <div class="container-details">
-    <h1>Details</h1>
-    <div>
-      <h2>Name:</h2>
-      <h3>Neider Urbano</h3>
-    </div>
-    <div>
-      <h2>Age:</h2>
-      <h3>23 Year</h3>
-    </div>
-
-    <div>
-      <h2>Location:</h2>
-      <h3>Paz de Ariporo, Casanare</h3>
-    </div>
-  </div>
-
+  <app-navbar></app-navbar>
+  <router-outlet></router-outlet>
   <div class="card-container">
     <a
       class="circle-link"
@@ -131,10 +101,7 @@
       </svg>
     </a>
   </div>
-
   <footer>
     <p>Example project for the Angular Course with Ada School</p>
   </footer>
 </div>
-
-<router-outlet></router-outlet>

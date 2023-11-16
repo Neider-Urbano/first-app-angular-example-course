@@ -1,0 +1,13 @@
+.container-profile {
+  text-align: center;
+}
+
+.container-profile img {
+  margin-top: 50px;
+}
+
+.container-nav-imgs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
