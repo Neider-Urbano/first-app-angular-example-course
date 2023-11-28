@@ -13,4 +13,50 @@
     <h2>Location:</h2>
     <h3>Paz de Ariporo, Casanare</h3>
   </div>
+
+  <div>
+    <h2>Contact me</h2>
+    <div>
+      <form [formGroup]="formGroup" (submit)="onSubmit(formGroup.value)">
+        <div>
+          <label>User</label>
+          <input name="user" formControlName="user" />
+          <div
+            *ngIf="
+              formGroup.get('user')?.invalid &&
+              (formGroup.get('user')?.dirty || formGroup.get('user')?.touched)
+            "
+          >
+            <span *ngIf="formGroup.get('user')?.errors?.['required']">
+              User required
+            </span>
+            <span *ngIf="formGroup.get('user')?.errors?.['email']">
+              User invalid
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <label>Password</label>
+          <input name="password" type="password" formControlName="password" />
+          <div
+            *ngIf="
+              formGroup.get('password')?.invalid &&
+              (formGroup.get('password')?.dirty ||
+                formGroup.get('password')?.touched)
+            "
+          >
+            <span *ngIf="formGroup.get('password')?.errors?.['required']">
+              Password required
+            </span>
+            <span *ngIf="formGroup.get('password')?.errors?.['minlength']">
+              Min 3 characters
+            </span>
+          </div>
+        </div>
+
+        <input type="submit" value="Login" [disabled]="!formGroup.valid" />
+      </form>
+    </div>
+  </div>
 </div>
