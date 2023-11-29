@@ -101,6 +101,31 @@
       </svg>
     </a>
   </div>
+
+  <div>
+    <h1>Realiza una pregunta de Si o No</h1>
+
+    <input
+      type="text"
+      placeholder="¿Qué deseas preguntar?"
+      [(ngModel)]="pregunta"
+    />
+
+    <button (click)="onSubmit()">Pregunta</button>
+
+    <div style="margin-top: 20px">
+      <h2>{{ respuesta?.Search?.[0]?.Title }}</h2>
+
+      <ng-container *ngIf="respuesta?.Search">
+        <img
+          *ngIf="respuesta?.Search"
+          [src]="respuesta?.Search?.[0]?.Poster"
+          alt=""
+        />
+      </ng-container>
+    </div>
+  </div>
+
   <footer>
     <p>Example project for the Angular Course with Ada School</p>
   </footer>
