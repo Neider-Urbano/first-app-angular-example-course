@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Answer } from './models/answer.model';
+import { Answer } from '../models/answer.model';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +10,7 @@ export class AppService {
 
   constructor(private _http: HttpClient) {}
 
-  obtenerRespuesta() {
+  getMovie() {
     return this._http.get<Answer>(this.apiUrl);
   }
 }

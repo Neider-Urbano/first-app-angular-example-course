@@ -3,15 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { AboutUsDiferidoRoutingModule } from './about-us-diferido-routing.module';
 import { AboutUsDiferidoComponent } from './about-us-diferido.component';
-
+import { DogComponent } from '../dog/dog.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CardDogComponent } from '../card-dog/card-dog.component';
 
 @NgModule({
-  declarations: [
-    AboutUsDiferidoComponent
-  ],
+  declarations: [AboutUsDiferidoComponent, DogComponent, CardDogComponent],
   imports: [
     CommonModule,
-    AboutUsDiferidoRoutingModule
-  ]
+    AboutUsDiferidoRoutingModule,
+    FormsModule,
+    HttpClientModule,
+  ],
 })
-export class AboutUsDiferidoModule { }
+export class AboutUsDiferidoModule {}

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Answer } from '../models/answer.model';
+import { AppService } from './app.service';
 
 type FormType = {
   user: string;
@@ -13,8 +15,9 @@ type FormType = {
 })
 export class ContactDiferidoComponent {
   formGroup: FormGroup;
+  public movie?: Answer;
 
-  constructor(private _builder: FormBuilder) {
+  constructor(private _builder: FormBuilder, private appService: AppService) {
     this.formGroup = this._builder.group({
       user: ['', [Validators.email, Validators.required]],
       password: ['', [Validators.required, Validators.minLength(3)]],
@@ -30,5 +33,11 @@ export class ContactDiferidoComponent {
     } else {
       alert('No valid');
     }
+  }
+
+  onSubmitMovie() {
+    this.appService.getMovie().subscribe((res) => {
+      this.movie = res;
+    });
   }
 }

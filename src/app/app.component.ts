@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppService } from './app.service';
+import { AppService } from './contact-diferido/app.service';
 import { Answer } from './models/answer.model';
 @Component({
   selector: 'app-root',
@@ -8,14 +8,13 @@ import { Answer } from './models/answer.model';
 })
 export class AppComponent {
   title = 'first-app-angular-example-course';
-  public pregunta = '';
-  public respuesta?: Answer;
+  public movie?: Answer;
 
   constructor(private appService: AppService) {}
 
   onSubmit() {
-    this.appService.obtenerRespuesta().subscribe((res) => {
-      this.respuesta = res;
+    this.appService.getMovie().subscribe((res) => {
+      this.movie = res;
     });
   }
 }

@@ -1,0 +1,13 @@
+<div style="margin-top: 20px">
+  <h2>{{ dog?.id }}</h2>
+
+  <ng-container *ngIf="dog">
+    <img
+      *ngIf="dog.url"
+      [src]="dog.url"
+      alt=""
+      width="{{ dog.width }}"
+      width="{{ dog.height }}"
+    />
+  </ng-container>
+</div>

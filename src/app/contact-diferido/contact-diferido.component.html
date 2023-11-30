@@ -59,4 +59,18 @@
       </form>
     </div>
   </div>
+
+  <div>
+    <h1>Movie favorite</h1>
+
+    <button (click)="onSubmitMovie()">GET</button>
+
+    <div style="margin-top: 20px">
+      <h2>{{ movie?.Search?.[0]?.Title }}</h2>
+
+      <ng-container *ngIf="movie?.Search">
+        <img *ngIf="movie?.Search" [src]="movie?.Search?.[0]?.Poster" alt="" />
+      </ng-container>
+    </div>
+  </div>
 </div>
