@@ -23,6 +23,7 @@ export class HomeComponent {
       url: 'https://scontent.fbog16-2.fna.fbcdn.net/v/t39.30808-6/319981111_1139285870125316_6081446878948633904_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=DE_E3wriTQYAX-5pTEx&_nc_ht=scontent.fbog16-2.fna&oh=00_AfCHC4Et2o0Vje-nHMyBdcM5KhDlLfUkZ3EDGx9jRGr8ow&oe=655B40EB',
     },
   ];
+
   goToImg(id: number) {
     this.router.navigate(['/img', id]);
   }

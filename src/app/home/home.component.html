@@ -8,7 +8,7 @@
   />
   <div class="container-nav-imgs">
     <button *ngFor="let img of imgs" (click)="goToImg(img.id)">
-      Img {{ img.id }}
+      <span appResaltarPares [value]="img.id">Img {{ img.id }}</span>
     </button>
   </div>
 </div>

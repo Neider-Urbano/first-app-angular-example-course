@@ -9,6 +9,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ImgViewComponent } from './img-view/img-view.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ResaltarParesDirective } from './resaltar-pares.directive';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     NotFoundComponent,
     ImgViewComponent,
+    ResaltarParesDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
