@@ -7,9 +7,10 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./img-view.component.css'],
 })
 export class ImgViewComponent implements OnInit {
+  imgSelect: undefined | { id: number; url: string } = undefined;
+
   constructor(private router: Router, private route: ActivatedRoute) {}
 
-  imgSelect: undefined | { id: number; url: string } = undefined;
   imgs = [
     {
       id: 1,

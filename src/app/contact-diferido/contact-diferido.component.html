@@ -1,17 +1,27 @@
 <div class="container-details">
-  <h1>Details</h1>
-  <div>
-    <h2>Name:</h2>
-    <h3>Neider Urbano</h3>
-  </div>
-  <div>
-    <h2>Age:</h2>
-    <h3>23 Year</h3>
-  </div>
+  <ng-template #templateLayout>
+    <h1>Not see details</h1>
+  </ng-template>
 
-  <div>
-    <h2>Location:</h2>
-    <h3>Paz de Ariporo, Casanare</h3>
+  <button (click)="mostrar()">See Details</button>
+
+  <div *ngIf="visible; else templateLayout">
+    <h1>Details</h1>
+
+    <div>
+      <h2>Name:</h2>
+      <h3>Neider Urbano</h3>
+    </div>
+
+    <div>
+      <h2>Age:</h2>
+      <h3>23 Year</h3>
+    </div>
+
+    <div>
+      <h2>Location:</h2>
+      <h3>Paz de Ariporo, Casanare</h3>
+    </div>
   </div>
 
   <div>

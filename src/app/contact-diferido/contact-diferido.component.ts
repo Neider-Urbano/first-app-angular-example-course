@@ -16,6 +16,7 @@ type FormType = {
 export class ContactDiferidoComponent {
   formGroup: FormGroup;
   public movie?: Answer;
+  visible = true;
 
   constructor(private _builder: FormBuilder, private appService: AppService) {
     this.formGroup = this._builder.group({
@@ -39,5 +40,9 @@ export class ContactDiferidoComponent {
     this.appService.getMovie().subscribe((res) => {
       this.movie = res;
     });
+  }
+
+  mostrar() {
+    this.visible = !this.visible;
   }
 }
