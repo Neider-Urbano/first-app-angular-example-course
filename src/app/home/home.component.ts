@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { InformationService } from '../services/information.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private informationService: InformationService
+  ) {}
 
   imgs = [
     {
@@ -26,5 +30,13 @@ export class HomeComponent {
 
   goToImg(id: number) {
     this.router.navigate(['/img', id]);
+  }
+
+  get information() {
+    const career = this.informationService.information.find(
+      (information) => information.label == 'career'
+    );
+
+    return career?.value;
   }
 }

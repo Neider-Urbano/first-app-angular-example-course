@@ -1,6 +1,9 @@
 <div class="container-profile">
   <h2>Profile</h2>
-  <p>I am System Engineer and Full Stack Dev</p>
+  <p>
+    I am
+    <span *ngIf="information">{{ information }}</span>
+  </p>
   <img
     width="400"
     alt="Neider Logo"

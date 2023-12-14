@@ -1,6 +1,9 @@
 <div class="container-about-me">
   <h2>About me</h2>
-  <p>System Engineer and Full Stack Dev with experience one year🚀👏🏼🔍.</p>
+  <p>
+    <span *ngIf="information">{{ information }}</span
+    >with experience one year🚀👏🏼🔍.
+  </p>
 </div>
 <div>
   <app-dog />

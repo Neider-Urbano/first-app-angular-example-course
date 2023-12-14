@@ -14,6 +14,7 @@ export class DogComponent implements OnInit {
 
   ngOnInit() {
     this.dogService.getDog().subscribe((res) => {
+      console.log(res);
       this.dog = res[0];
     });
   }
