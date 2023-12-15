@@ -9,7 +9,7 @@ export class InformationService {
   private listInformation = [
     {
       label: 'age',
-      value: 32,
+      value: '32',
     },
     {
       label: 'name',

@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ResaltarParesDirective } from './resaltar-pares.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormatTextCareerPipe } from './home/format-text-career.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NotFoundComponent,
     ImgViewComponent,
     ResaltarParesDirective,
+    FormatTextCareerPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule],
   providers: [],

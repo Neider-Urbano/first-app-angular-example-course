@@ -8,6 +8,8 @@ import { InformationService } from '../services/information.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  public priceExpect = 4000000;
+
   constructor(
     private router: Router,
     private informationService: InformationService

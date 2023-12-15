@@ -2,8 +2,9 @@
   <h2>Profile</h2>
   <p>
     I am
-    <span *ngIf="information">{{ information }}</span>
+    <span *ngIf="information">{{ information | formatTextCareer : true }}</span>
   </p>
+  <p>Price expect: {{ priceExpect | currency }}</p>
   <img
     width="400"
     alt="Neider Logo"

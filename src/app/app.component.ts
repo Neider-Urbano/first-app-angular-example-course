@@ -9,6 +9,7 @@ import { Answer } from './models/answer.model';
 export class AppComponent {
   title = 'first-app-angular-example-course';
   public movie?: Answer;
+  public dateCurrent = new Date();
 
   constructor(private appService: AppService) {}
 
