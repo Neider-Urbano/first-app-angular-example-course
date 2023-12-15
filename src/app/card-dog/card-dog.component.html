@@ -1,13 +1,17 @@
-<div style="margin-top: 20px">
-  <h2>{{ dog?.id }}</h2>
-
+<div class="container">
   <ng-container *ngIf="dog">
-    <img
-      *ngIf="dog.url"
-      [src]="dog.url"
-      alt=""
-      width="{{ dog.width }}"
-      width="{{ dog.height }}"
-    />
+    <mat-card class="card-material">
+      <mat-card-header>
+        <mat-card-title>{{ dog.id }}</mat-card-title>
+      </mat-card-header>
+      <img *ngIf="dog.url" [src]="dog.url" alt="" mat-card-image />
+      <mat-card-content>
+        <p>Un perro al azar</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
   </ng-container>
 </div>

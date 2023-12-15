@@ -8,6 +8,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CardDogComponent } from '../card-dog/card-dog.component';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+
 @NgModule({
   declarations: [AboutUsDiferidoComponent, DogComponent, CardDogComponent],
   imports: [
@@ -15,6 +18,8 @@ import { CardDogComponent } from '../card-dog/card-dog.component';
     AboutUsDiferidoRoutingModule,
     FormsModule,
     HttpClientModule,
+    MatCardModule,
+    MatButtonModule,
   ],
 })
 export class AboutUsDiferidoModule {}

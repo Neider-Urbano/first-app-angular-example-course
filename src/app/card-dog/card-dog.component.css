@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.card-material {
+  max-width: 400px;
+  margin: 5%;
+}
