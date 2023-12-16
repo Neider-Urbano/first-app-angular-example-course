@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FormatTextCareerPipe implements PipeTransform {
   transform(value: string, isApply: boolean): string {
-    if (value) '';
+    if (!value) '';
     if (isApply) return value.toLocaleUpperCase();
     return value;
   }
