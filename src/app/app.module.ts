@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { ResaltarParesDirective } from './resaltar-pares.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormatTextCareerPipe } from './home/format-text-career.pipe';
+import { AngularHooksComponent } from './angular-hooks/angular-hooks.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormatTextCareerPipe } from './home/format-text-career.pipe';
     ImgViewComponent,
     ResaltarParesDirective,
     FormatTextCareerPipe,
+    AngularHooksComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule],
   providers: [],
