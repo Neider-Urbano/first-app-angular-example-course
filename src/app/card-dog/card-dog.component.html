@@ -1,14 +1,14 @@
 <div class="container">
   <ng-container *ngIf="dog">
     <mat-card class="card-material">
-      <mat-card-header>
+      <mat-card-header class="container-id-dog">
         <mat-card-title>{{ dog.id }}</mat-card-title>
       </mat-card-header>
-      <img *ngIf="dog.url" [src]="dog.url" alt="" mat-card-image />
-      <mat-card-content>
-        <p>Un perro al azar</p>
+      <img *ngIf="dog.url" [src]="dog.url" alt="dog select" mat-card-image />
+      <mat-card-content class="container-description-dog">
+        <p>Usando la api de thedogapi obtenemos un perro al azar.</p>
       </mat-card-content>
-      <mat-card-actions>
+      <mat-card-actions class="container-buttons-dog">
         <button mat-button>LIKE</button>
         <button mat-button>SHARE</button>
       </mat-card-actions>

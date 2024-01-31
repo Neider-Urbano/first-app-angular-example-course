@@ -1,86 +1,34 @@
 <div class="container-details">
-  <ng-template #templateLayout>
-    <h1>Not see details</h1>
-  </ng-template>
+  <h2>Details</h2>
 
-  <button (click)="mostrar()">See Details</button>
+  <table
+    mat-table
+    [dataSource]="dataSource"
+    class="mat-elevation-z8 demo-table container-table"
+  >
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef>No.</th>
+      <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+    </ng-container>
 
-  <div *ngIf="visible; else templateLayout">
-    <h1>Details</h1>
+    <ng-container matColumnDef="key">
+      <th mat-header-cell *matHeaderCellDef>Key</th>
+      <td mat-cell *matCellDef="let element">{{ element.key }}</td>
+    </ng-container>
 
-    <div>
-      <h2>Name:</h2>
-      <h3>Neider Urbano</h3>
-    </div>
+    <ng-container matColumnDef="value">
+      <th mat-header-cell *matHeaderCellDef>Value</th>
+      <td mat-cell *matCellDef="let element">{{ element.value }}</td>
+    </ng-container>
 
-    <div>
-      <h2>Age:</h2>
-      <h3>23 Year</h3>
-    </div>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+      mat-row
+      (click)="clickedRows.add(row)"
+      [class.demo-row-is-clicked]="clickedRows.has(row)"
+      *matRowDef="let row; columns: displayedColumns"
+    ></tr>
+  </table>
 
-    <div>
-      <h2>Location:</h2>
-      <h3>Paz de Ariporo, Casanare</h3>
-    </div>
-  </div>
-
-  <div>
-    <h2>Contact me</h2>
-    <div>
-      <form [formGroup]="formGroup" (submit)="onSubmit(formGroup.value)">
-        <div>
-          <label>User</label>
-          <input name="user" formControlName="user" />
-          <div
-            *ngIf="
-              formGroup.get('user')?.invalid &&
-              (formGroup.get('user')?.dirty || formGroup.get('user')?.touched)
-            "
-          >
-            <span *ngIf="formGroup.get('user')?.errors?.['required']">
-              User required
-            </span>
-            <span *ngIf="formGroup.get('user')?.errors?.['email']">
-              User invalid
-            </span>
-          </div>
-        </div>
-
-        <div>
-          <label>Password</label>
-          <input name="password" type="password" formControlName="password" />
-          <div
-            *ngIf="
-              formGroup.get('password')?.invalid &&
-              (formGroup.get('password')?.dirty ||
-                formGroup.get('password')?.touched)
-            "
-          >
-            <span *ngIf="formGroup.get('password')?.errors?.['required']">
-              Password required
-            </span>
-            <span *ngIf="formGroup.get('password')?.errors?.['minlength']">
-              Min 3 characters
-            </span>
-          </div>
-        </div>
-
-        <input type="submit" value="Login" [disabled]="!formGroup.valid" />
-      </form>
-    </div>
-  </div>
-
-  <div>
-    <h1>Movie favorite</h1>
-
-    <button (click)="onSubmitMovie()">GET</button>
-
-    <div style="margin-top: 20px">
-      <h2>{{ movie?.Search?.[0]?.Title }}</h2>
-
-      <ng-container *ngIf="movie?.Search">
-        <img *ngIf="movie?.Search" [src]="movie?.Search?.[0]?.Poster" alt="" />
-      </ng-container>
-    </div>
-  </div>
+  <app-send-email></app-send-email>
 </div>

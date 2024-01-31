@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Answer } from '../models/answer.model';
-import { AppService } from './app.service';
-
-type FormType = {
-  user: string;
-  password: string;
-};
+import {
+  ELEMENT_DATA,
+  PeriodicElement,
+} from '../models/contactInformation.model';
 
 @Component({
   selector: 'app-contact-diferido',
@@ -14,35 +10,7 @@ type FormType = {
   styleUrls: ['./contact-diferido.component.css'],
 })
 export class ContactDiferidoComponent {
-  formGroup: FormGroup;
-  public movie?: Answer;
-  visible = true;
-
-  constructor(private _builder: FormBuilder, private appService: AppService) {
-    this.formGroup = this._builder.group({
-      user: ['', [Validators.email, Validators.required]],
-      password: ['', [Validators.required, Validators.minLength(3)]],
-    });
-  }
-
-  onSubmit(form: FormType) {
-    if (this.formGroup.valid) {
-      alert(`
-        User: ${form.user}
-        Password: ${form.password}
-      `);
-    } else {
-      alert('No valid');
-    }
-  }
-
-  onSubmitMovie() {
-    this.appService.getMovie().subscribe((res) => {
-      this.movie = res;
-    });
-  }
-
-  mostrar() {
-    this.visible = !this.visible;
-  }
+  displayedColumns: string[] = ['position', 'key', 'value'];
+  dataSource = ELEMENT_DATA;
+  clickedRows = new Set<PeriodicElement>();
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Dog } from '../models/dog.model';
 import { DogService } from './dog.service';
+import { LoadingService } from './loading.service';
 
 @Component({
   selector: 'app-dog',
@@ -9,12 +10,15 @@ import { DogService } from './dog.service';
 })
 export class DogComponent implements OnInit {
   public dog?: Dog;
+  isLoading$ = this.loadingService.isFetchingDataSubject;
 
-  constructor(private dogService: DogService) {}
+  constructor(
+    private dogService: DogService,
+    private loadingService: LoadingService
+  ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.dogService.getDog().subscribe((res) => {
-      console.log(res);
       this.dog = res[0];
     });
   }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppService } from './contact-diferido/app.service';
+import { AppService } from './favorite-movie/app.service';
 import { Answer } from './models/answer.model';
 @Component({
   selector: 'app-root',
@@ -7,13 +7,13 @@ import { Answer } from './models/answer.model';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'first-app-angular-example-course';
+  title: string = 'first-app-angular-example-course';
   public movie?: Answer;
-  public dateCurrent = new Date();
+  public dateCurrent: Date = new Date();
 
   constructor(private appService: AppService) {}
 
-  onSubmit() {
+  onSubmit(): void {
     this.appService.getMovie().subscribe((res) => {
       this.movie = res;
     });

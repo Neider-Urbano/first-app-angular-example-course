@@ -9,3 +9,5 @@ export interface Data {
   Year: string;
   imdbID: string;
 }
+
+export type Answers = Array<Data>;

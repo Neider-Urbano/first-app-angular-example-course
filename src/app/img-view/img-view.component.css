@@ -1,5 +1,12 @@
+.container-img-view {
+  text-align: center;
+  width: 400px;
+}
+
+.container-img-view p {
+  text-align: justify;
+}
+
 .img-view {
   margin-top: 20px;
-  width: 200px;
-  height: 300px;
 }

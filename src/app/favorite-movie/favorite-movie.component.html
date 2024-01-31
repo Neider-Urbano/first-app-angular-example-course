@@ -1,0 +1,11 @@
+<div class="container-project-movie">
+  <h2>Movie favorite</h2>
+
+  <div *ngIf="isLoading$ | async; else templateApiMovie">
+    <div class="lds-hourglass"></div>
+  </div>
+
+  <ng-template #templateApiMovie>
+    <app-card-movie [movie]="this.movie" />
+  </ng-template>
+</div>

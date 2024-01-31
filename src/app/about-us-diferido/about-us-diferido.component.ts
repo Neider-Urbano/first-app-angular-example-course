@@ -7,13 +7,19 @@ import { InformationService } from '../services/information.service';
   styleUrls: ['./about-us-diferido.component.css'],
 })
 export class AboutUsDiferidoComponent {
+  visible: boolean = true;
+
   constructor(private informationService: InformationService) {}
 
-  get information() {
+  get information(): string | undefined {
     const career = this.informationService.information.find(
       (information) => information.label == 'career'
     );
 
     return career?.value;
+  }
+
+  mostrar(value: boolean): void {
+    this.visible = value;
   }
 }

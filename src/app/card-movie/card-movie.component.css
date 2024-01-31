@@ -1,0 +1,18 @@
+.card-material {
+  width: 100%;
+}
+
+.container-id-movie {
+  display: flex;
+  justify-content: center;
+}
+
+.container-description-movie {
+  font-size: 13pt;
+  margin-top: 5px;
+}
+
+.container-buttons-movie {
+  display: flex;
+  justify-content: center;
+}

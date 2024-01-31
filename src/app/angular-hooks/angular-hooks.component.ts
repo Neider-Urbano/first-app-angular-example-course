@@ -29,43 +29,48 @@ export class AngularHooksComponent
   counter: number = 0;
 
   constructor() {
-    console.log('constructor');
+    // console.log('constructor');
     this.counter = 1;
   }
 
   inc() {
-    console.log('inc');
     this.counter += 1;
   }
 
+  dec() {
+    if (this.counter > 0) {
+      this.counter -= 1;
+    }
+  }
+
   ngOnInit() {
-    console.log('ng on init');
+    // console.log('ng on init');
   }
 
   ngOnDestroy() {
-    console.log('ngOnDestroy');
+    // console.log('ngOnDestroy');
   }
 
   ngDoCheck() {
-    console.log('ngDoCheck');
+    // console.log('ngDoCheck');
   }
 
   ngOnChanges() {
-    console.log('ngOnChanges');
+    // console.log('ngOnChanges');
   }
 
   ngAfterContentInit() {
-    console.log('ngAfterContentInit');
+    // console.log('ngAfterContentInit');
   }
 
   ngAfterContentChecked() {
-    console.log('ngAfterContentChecked');
+    // console.log('ngAfterContentChecked');
   }
 
   ngAfterViewInit() {
-    console.log('ngAfterViewInit');
+    // console.log('ngAfterViewInit');
   }
   ngAfterViewChecked() {
-    console.log('ngAfterViewChecked');
+    // console.log('ngAfterViewChecked');
   }
 }

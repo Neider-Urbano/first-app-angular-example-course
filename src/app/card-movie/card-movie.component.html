@@ -1,0 +1,15 @@
+<ng-container *ngIf="movie">
+  <mat-card class="card-material">
+    <mat-card-header class="container-id-movie">
+      <mat-card-title>{{ movie.Title }}</mat-card-title>
+    </mat-card-header>
+    <img *ngIf="movie" [src]="movie.Poster" alt="movie select" mat-card-image />
+    <mat-card-content class="container-description-movie">
+      <p>Usando la api de omdbapi obtenemos una pelicula al azar.</p>
+    </mat-card-content>
+    <mat-card-actions class="container-buttons-movie">
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</ng-container>

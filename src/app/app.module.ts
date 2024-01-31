@@ -7,12 +7,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ImgViewComponent } from './img-view/img-view.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { ResaltarParesDirective } from './resaltar-pares.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormatTextCareerPipe } from './home/format-text-career.pipe';
 import { AngularHooksComponent } from './angular-hooks/angular-hooks.component';
+import { HeaderComponent } from './header/header.component';
+import { NetworksLogoHeaderComponent } from './networks-logo-header/networks-logo-header.component';
+import { TextSalaryExpectationsDirective } from './directives/text-salary-expectations.directive';
+import { ApiInterceptor } from './interceptors/api.interceptor';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,22 @@ import { AngularHooksComponent } from './angular-hooks/angular-hooks.component';
     HomeComponent,
     NotFoundComponent,
     ImgViewComponent,
-    ResaltarParesDirective,
     FormatTextCareerPipe,
     AngularHooksComponent,
+    HeaderComponent,
+    NetworksLogoHeaderComponent,
+    TextSalaryExpectationsDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
