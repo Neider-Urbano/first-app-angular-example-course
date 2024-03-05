@@ -1,0 +1,25 @@
+<div class="container-about-me">
+  <h2>About me</h2>
+  <p>
+    <span *ngIf="information">{{ information }}</span> with experience one
+    year🚀👏🏼🔍. Con un año de experiencia en el área de programación, he
+    participado activamente en la creación, implementación y mantenimiento de
+    proyectos web. Estoy comprometido con la mejora continua, la resolución de
+    problemas y el aprendizaje constante.
+  </p>
+
+  <div class="container-projects">
+    <h2>Projects</h2>
+
+    <div class="container-api-buttons">
+      <button (click)="mostrar(true)">Api Dog</button>
+      <button (click)="mostrar(false)">Api Movie</button>
+    </div>
+
+    <app-dog *ngIf="visible; else templateApiMovie"> </app-dog>
+
+    <ng-template #templateApiMovie>
+      <app-favorite-movie></app-favorite-movie>
+    </ng-template>
+  </div>
+</div>

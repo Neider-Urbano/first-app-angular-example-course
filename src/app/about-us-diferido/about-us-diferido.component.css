@@ -1,0 +1,18 @@
+.container-about-me {
+  text-align: center;
+  width: 400px;
+}
+
+.container-about-me p {
+  text-align: justify;
+}
+
+.container-projects {
+  margin-top: 50px;
+}
+
+.container-api-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}

@@ -1,0 +1,25 @@
+.container-profile {
+  text-align: center;
+}
+
+.container-profile img {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.container-nav-imgs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.container-logo-networks {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.container-logo-networks svg {
+  height: 30px;
+  width: 30px;
+}

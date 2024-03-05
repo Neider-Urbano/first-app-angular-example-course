@@ -1,0 +1,13 @@
+<div class="content" role="main">
+  <app-header></app-header>
+
+  <router-outlet></router-outlet>
+
+  <footer>
+    <p class="text-footer">
+      Mi portafolio digital hecho con la tecnologia Angular
+    </p>
+    <p>Fecha Actual - {{ dateCurrent | date : "dd/MMM/yyyy" }}</p>
+    <app-angular-hooks></app-angular-hooks>
+  </footer>
+</div>

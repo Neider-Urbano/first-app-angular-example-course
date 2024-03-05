@@ -1,0 +1,27 @@
+.container-send-email {
+  margin-top: 40px;
+}
+
+.container-form-group {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.input-user {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-user label {
+  text-align: left;
+  width: 140px;
+}
+
+.input-user > input {
+  width: 100%;
+}
+
+.button-login {
+  margin-top: 15px;
+}
