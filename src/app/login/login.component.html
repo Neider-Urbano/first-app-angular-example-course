@@ -1,0 +1,62 @@
+<div class="container-login">
+  <h2>Login de usuario</h2>
+
+  <form
+    [formGroup]="formLogin"
+    (submit)="onSubmit()"
+    class="container-form-group"
+  >
+    <div class="container-email-info-user">
+      <div class="input-user">
+        <input name="email" formControlName="email" placeholder="Email" />
+      </div>
+
+      <div class="input-user">
+        <input
+          name="password"
+          type="password"
+          formControlName="password"
+          placeholder="Password"
+        />
+      </div>
+    </div>
+
+    <div class="container-errors">
+      <div
+        *ngIf="
+          formLogin.get('email')?.invalid &&
+          (formLogin.get('email')?.dirty || formLogin.get('email')?.touched)
+        "
+      >
+        <span *ngIf="formLogin.get('email')?.errors?.['required']">
+          - Email required
+        </span>
+        <span *ngIf="formLogin.get('email')?.errors?.['email']">
+          - Email invalid
+        </span>
+      </div>
+
+      <div
+        *ngIf="
+          formLogin.get('password')?.invalid &&
+          (formLogin.get('password')?.dirty ||
+            formLogin.get('password')?.touched)
+        "
+      >
+        <span *ngIf="formLogin.get('password')?.errors?.['required']">
+          - Password required
+        </span>
+        <span *ngIf="formLogin.get('password')?.errors?.['minlength']">
+          - Min 3 characters
+        </span>
+      </div>
+    </div>
+
+    <input
+      type="submit"
+      value="Inicar Sesión"
+      [disabled]="!formLogin.valid"
+      class="button-login"
+    />
+  </form>
+</div>

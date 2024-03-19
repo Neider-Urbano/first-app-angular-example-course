@@ -1,0 +1,15 @@
+.container-projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+/* .container-projects {
+  margin-top: 50px;
+}
+
+.container-api-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+} */

@@ -1,5 +1,23 @@
 .container-likes {
   display: flex;
-  gap: 10px;
+  gap: 25px;
   justify-content: center;
+  align-items: center;
+}
+
+.container-likes button {
+  font-size: 15pt;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.container-likes p {
+  margin: 0;
+  font-size: 13pt;
+}
+
+.container-likes p strong {
+  font-weight: 600;
 }

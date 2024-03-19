@@ -1,0 +1,55 @@
+.container-login {
+  margin-top: 70px;
+  width: 100%;
+}
+
+.container-login h2 {
+  text-align: center;
+}
+
+.container-form-group {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container-email-info-user {
+  display: flex;
+  gap: 15px;
+}
+
+.input-user {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.input-user > input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 13pt;
+  outline: none;
+  background: #efeff0;
+}
+
+.button-login {
+  background: #088046;
+  color: #fff;
+  height: 44px;
+  font-size: 12.5pt;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-login:hover {
+  font-weight: 600;
+}
+
+.container-errors {
+  color: #a15830;
+  font-size: 12.5pt;
+}

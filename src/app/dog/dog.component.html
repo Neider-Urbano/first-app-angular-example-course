@@ -1,11 +1,7 @@
-<div class="container-project-dog">
-  <h2>Random Dog</h2>
-
-  <div *ngIf="isLoading$ | async; else templateApiDog">
-    <div class="lds-hourglass"></div>
-  </div>
-
-  <ng-template #templateApiDog>
-    <app-card-dog [dog]="this.dog" />
-  </ng-template>
+<div *ngIf="isLoading$ | async; else templateApiDog">
+  <div class="lds-hourglass"></div>
 </div>
+
+<ng-template #templateApiDog>
+  <app-card-dog [dog]="this.dog" />
+</ng-template>

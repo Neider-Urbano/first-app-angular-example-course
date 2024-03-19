@@ -9,9 +9,9 @@ import { Observable } from 'rxjs';
 export class AppService {
   apiUrl: string = 'https://www.omdbapi.com/?apikey=4287ad07&s=avenger';
 
-  constructor(private _http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
   getMovie(): Observable<Answer> {
-    return this._http.get<Answer>(this.apiUrl);
+    return this.http.get<Answer>(this.apiUrl);
   }
 }

@@ -1,24 +1,33 @@
 .container-nav {
+  padding: 0px 40px;
   display: flex;
+  flex-direction: column;
   gap: 5px;
 }
 
 .circle-link {
+  text-decoration: none;
+  color: #757575;
+  font-size: 16px;
   height: 40px;
-  width: 40px;
-  border-radius: 40px;
-  margin: 8px;
-  background-color: white;
-  border: 1px solid #eeeeee;
   display: flex;
-  justify-content: center;
+  border-radius: 10px;
   align-items: center;
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: 1s ease-out;
+  padding-left: 10px;
+  font-weight: 500;
+}
+
+.circle-link svg {
+  margin-right: 10px;
+  width: 20px;
 }
 
 .circle-link:hover {
-  transform: translateY(-0.25rem);
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  background: #e9eaeb;
+  color: #111111;
+}
+
+.circle-link-active {
+  background: #d9dadc;
+  color: #111111;
 }

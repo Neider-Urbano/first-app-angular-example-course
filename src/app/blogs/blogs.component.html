@@ -1,0 +1,9 @@
+<div class="container-blogs">
+  <div
+    *ngFor="let blog of blogs"
+    (click)="goToBlogLink(blog.id)"
+    id="container-project-card"
+  >
+    <app-card-blog [blog]="blog"></app-card-blog>
+  </div>
+</div>

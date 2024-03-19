@@ -1,0 +1,17 @@
+.container-blogs {
+  margin-top: 150px;
+}
+
+.container-blogs h1 {
+  color: #111111;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 20pt;
+}
+
+.container-blogs p {
+  color: #666666;
+  font-size: 12pt;
+  margin-bottom: 40px;
+}

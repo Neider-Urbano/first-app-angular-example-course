@@ -10,9 +10,9 @@ export class DogService {
   // isLoading$ = new Subject<boolean>();
   apiUrl: string = 'https://api.thedogapi.com/v1/images/search';
 
-  constructor(private _http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
   getDog(): Observable<[Dog]> {
-    return this._http.get<[Dog]>(this.apiUrl);
+    return this.http.get<[Dog]>(this.apiUrl);
   }
 }

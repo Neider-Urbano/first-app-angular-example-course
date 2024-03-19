@@ -8,6 +8,8 @@ import { InformationService } from '../services/information.service';
 })
 export class AboutUsDiferidoComponent {
   visible: boolean = true;
+  imgUserPhoto =
+    'https://avatars.githubusercontent.com/u/80359162?s=400&u=6c6750cdcd678d6d8eae27c35d06ead0c3972a66&v=4';
 
   constructor(private informationService: InformationService) {}
 

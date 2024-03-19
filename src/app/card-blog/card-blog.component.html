@@ -1,0 +1,13 @@
+<div class="container-blog">
+  <div class="container-info-blog">
+    <p>{{ this.blog?.date | date : "dd/MM/yyyy" }}</p>
+    <h1>{{ this.blog?.title }}</h1>
+    <p>{{ this.blog?.description }}</p>
+    <a href="{{ this.blog?.link }}" target="_blank">
+      <button class="button-leer-mas">Leer Más</button>
+    </a>
+  </div>
+  <div class="container-img-blog">
+    <img src="{{ this.blog?.img }}" alt="img blog" />
+  </div>
+</div>

@@ -17,7 +17,7 @@ export class InformationService {
     },
     {
       label: 'career',
-      value: 'System Engineer and Full Stack Dev',
+      value: 'Ingeniero de Sistemas. Desarrollador Full Stack.',
     },
   ];
 

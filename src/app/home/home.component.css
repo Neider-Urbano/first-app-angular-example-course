@@ -1,25 +1,114 @@
 .container-profile {
-  text-align: center;
+  height: auto;
 }
 
-.container-profile img {
-  margin-top: 30px;
-  margin-bottom: 10px;
+.container-profile > div {
+  margin-top: 150px;
 }
 
-.container-nav-imgs {
+.container-profile h2 {
+  font-size: 20pt;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.container-profile h3 {
+  font-size: 16pt;
+  color: #666666;
+  margin: 0;
+  font-weight: 500;
+}
+
+.container-location-info {
+  margin: 50px 0px;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  color: #a15830;
+  font-size: 12pt;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.container-logo-networks {
+.container-location-info div {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 7px;
 }
 
-.container-logo-networks svg {
-  height: 30px;
-  width: 30px;
+.container-location-info .ionicon {
+  width: 18px;
+  height: 18px;
+  color: #a15830;
+}
+
+.container-location-info p {
+  margin: 0;
+}
+
+.parrafo-perfil-profesional {
+  margin-bottom: 50px;
+  color: #666666;
+  font-size: 13.5pt;
+}
+
+.container-buttons-home {
+  display: flex;
+  gap: 15px;
+}
+
+.button-about {
+  background: #303236;
+  border-radius: 10px;
+  padding: 0px 20px;
+  color: white;
+  font-size: 13pt;
+  height: 44px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-about:hover {
+  background: #18191b;
+}
+
+.button-about:active {
+  background: #60646c;
+}
+
+.button-copy-email {
+  display: flex;
+  background: none;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0px 20px;
+  cursor: pointer;
+  border: 1px #aeb1b7 solid;
+  gap: 5px;
+}
+
+.button-copy-email p {
+  font-size: 13pt;
+  margin: 0;
+}
+
+.button-copy-email .ionicon {
+  color: #999999;
+  width: 25px;
+  height: 25px;
+}
+
+.container-projects {
+  margin-top: 250px;
+}
+
+.container-blogs {
+  margin-top: 100px;
+}
+
+.container-projects h1,
+.container-blogs h1 {
+  font-size: 17pt;
+  margin: 0;
+  margin-bottom: 40px;
 }

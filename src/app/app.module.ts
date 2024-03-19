@@ -11,11 +11,17 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormatTextCareerPipe } from './home/format-text-career.pipe';
-import { AngularHooksComponent } from './angular-hooks/angular-hooks.component';
 import { HeaderComponent } from './header/header.component';
 import { NetworksLogoHeaderComponent } from './networks-logo-header/networks-logo-header.component';
 import { TextSalaryExpectationsDirective } from './directives/text-salary-expectations.directive';
+import { ProjectsComponent } from './projects/projects.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
+import { ProjectsPageComponent } from './projects-page/projects-page.component';
+import { BlogsComponent } from './blogs/blogs.component';
+import { CardBlogComponent } from './card-blog/card-blog.component';
+import { BlogsPageComponent } from './blogs-page/blogs-page.component';
 import { ApiInterceptor } from './interceptors/api.interceptor';
+import { JwtApiInterceptor } from './interceptors/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -25,10 +31,15 @@ import { ApiInterceptor } from './interceptors/api.interceptor';
     NotFoundComponent,
     ImgViewComponent,
     FormatTextCareerPipe,
-    AngularHooksComponent,
     HeaderComponent,
     NetworksLogoHeaderComponent,
     TextSalaryExpectationsDirective,
+    ProjectsComponent,
+    ProjectCardComponent,
+    ProjectsPageComponent,
+    BlogsComponent,
+    CardBlogComponent,
+    BlogsPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +50,7 @@ import { ApiInterceptor } from './interceptors/api.interceptor';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: JwtApiInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })

@@ -10,10 +10,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class SendEmailComponent {
   formGroup: FormGroup;
 
-  constructor(private _builder: FormBuilder) {
-    this.formGroup = this._builder.group({
+  constructor(private builder: FormBuilder) {
+    this.formGroup = this.builder.group({
       email: ['', [Validators.email, Validators.required]],
       password: ['', [Validators.required, Validators.minLength(3)]],
+      message: ['', [Validators.required, Validators.minLength(3)]],
     });
   }
 
@@ -22,6 +23,7 @@ export class SendEmailComponent {
       alert(`
         Email: ${form.email}
         Password: ${form.password}
+        Message: ${form.message}
       `);
     } else {
       alert('No valid');

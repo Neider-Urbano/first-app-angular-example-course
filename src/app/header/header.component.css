@@ -1,29 +1,82 @@
 .toolbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1976d2;
-  color: white;
-  font-weight: 600;
-  gap: 15%;
+  flex-direction: column;
+  padding-top: 40px;
 }
 
 .div-logo-text {
-  padding: 10px 0;
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div-logo-text img {
+  border-radius: 5px;
+  width: 56px;
+  height: 56px;
 }
 
 .div-logo-text div {
-  display: flex;
-  flex-direction: column;
+  margin-top: 20px;
+  text-align: center;
 }
 
-.my-curriculum {
-  font-size: 11pt;
+.div-logo-text h1 {
+  margin: 0px;
+  font-size: 15pt;
+}
+
+.div-logo-text p {
+  font-size: 12.5pt;
+  color: #666666;
+}
+
+.container-redes-sociales {
+  margin: 60px 0px;
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.container-theme {
+  padding-bottom: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.container-theme div {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-theme div:hover {
+  background: #e9eaeb;
+}
+
+.container-theme .ionicon {
+  width: 20px;
+}
+
+#a-social-network {
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#a-social-network:hover {
+  background: #e9eaeb;
 }

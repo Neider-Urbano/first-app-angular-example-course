@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { imgsData } from '../services/dataImgs';
 import { ImgProfile } from '../models/imgsProfile.model';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-img-view',
@@ -11,7 +12,7 @@ import { ImgProfile } from '../models/imgsProfile.model';
 export class ImgViewComponent implements OnInit {
   imgSelect: undefined | ImgProfile = undefined;
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private _location: Location, private route: ActivatedRoute) {}
 
   imgs = imgsData;
 
@@ -23,6 +24,6 @@ export class ImgViewComponent implements OnInit {
   }
 
   goToVolver(): void {
-    this.router.navigate(['/']);
+    this._location.back();
   }
 }

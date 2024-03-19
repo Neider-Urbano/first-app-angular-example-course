@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ImgViewComponent } from './img-view/img-view.component';
+import { ProjectsPageComponent } from './projects-page/projects-page.component';
+import { BlogsPageComponent } from './blogs-page/blogs-page.component';
+import { jwtGuardGuard } from './guards/jwt-guard.guard';
 
 const routes: Routes = [
   {
@@ -12,6 +15,22 @@ const routes: Routes = [
   {
     path: 'img/:id',
     component: ImgViewComponent,
+  },
+  {
+    path: 'project/:id',
+    loadChildren: () =>
+      import('./project-detail/project-detail.module').then(
+        (m) => m.ProjectDetailModule
+      ),
+    canActivate: [jwtGuardGuard],
+  },
+  {
+    path: 'Projects',
+    component: ProjectsPageComponent,
+  },
+  {
+    path: 'Blogs',
+    component: BlogsPageComponent,
   },
   {
     path: 'AboutUs',
