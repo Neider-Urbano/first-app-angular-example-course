@@ -4,7 +4,13 @@
       <mat-card-header class="container-id-dog">
         <mat-card-title>{{ dog.id }}</mat-card-title>
       </mat-card-header>
-      <img *ngIf="dog.url" [src]="dog.url" alt="dog select" mat-card-image />
+      <img
+        *ngIf="dog.url"
+        [src]="dog.url"
+        alt="dog select"
+        mat-card-image
+        class="img-dog"
+      />
       <mat-card-content class="container-description-dog">
         <p>Usando la api de thedogapi obtenemos un perro al azar.</p>
       </mat-card-content>

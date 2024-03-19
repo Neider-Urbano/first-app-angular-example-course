@@ -1,9 +1,85 @@
 .container-details {
-  margin-top: 15px;
-  text-align: center;
-  width: 400px;
+  margin-top: 150px;
+  width: 100%;
+}
+
+.container-details h1 {
+  color: #111111;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 20pt;
+}
+
+.container-details p {
+  color: #666666;
+  font-size: 12pt;
+  margin-bottom: 40px;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  color: #e9eaeb;
+  background-color: #e9eaeb;
+  margin-bottom: 60px;
 }
 
 .container-table {
   width: 100%;
+}
+
+td,
+th {
+  font-size: 12.5pt;
+  color: #666666;
+}
+
+.container-buttons-contact {
+  display: flex;
+  gap: 15px;
+  margin: 30px 0px 0px 0px;
+}
+
+.button-call {
+  background: #303236;
+  border-radius: 10px;
+  padding: 0px 20px;
+  color: white;
+  font-size: 13pt;
+  height: 44px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-call:hover {
+  background: #18191b;
+}
+
+.button-call:active {
+  background: #60646c;
+}
+
+.button-copy-email {
+  display: flex;
+  background: none;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0px 20px;
+  cursor: pointer;
+  border: 1px #aeb1b7 solid;
+  gap: 5px;
+}
+
+.button-copy-email p {
+  font-size: 13pt;
+  margin: 0;
+}
+
+.button-copy-email .ionicon {
+  color: #999999;
+  width: 25px;
+  height: 25px;
 }

@@ -1,5 +1,5 @@
 .card-material {
-  width: 100%;
+  width: 350px;
 }
 
 .container-id-movie {
@@ -15,4 +15,9 @@
 .container-buttons-movie {
   display: flex;
   justify-content: center;
+}
+
+.img-movie {
+  width: 350px;
+  height: auto;
 }

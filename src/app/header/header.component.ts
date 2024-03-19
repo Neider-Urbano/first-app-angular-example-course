@@ -6,6 +6,7 @@ import {
   Renderer2,
   ViewChildren,
 } from '@angular/core';
+import { SocialNetworks } from '../models/socialNetworks.model';
 
 @Component({
   selector: 'app-header',
@@ -14,6 +15,28 @@ import {
 })
 export class HeaderComponent implements AfterViewInit {
   @ViewChildren('asSvg') svgRef!: QueryList<ElementRef>;
+  imgUserPhoto =
+    'https://avatars.githubusercontent.com/u/80359162?s=400&u=6c6750cdcd678d6d8eae27c35d06ead0c3972a66&v=4';
+  socialNetworks: SocialNetworks = [
+    {
+      id: 1,
+      ariaLabel: 'GitHub-Neider',
+      title: 'GitHub',
+      href: 'https://github.com/Neider-Urbano',
+    },
+    {
+      id: 2,
+      ariaLabel: 'LinkedIn-Neider',
+      title: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/neiderurbano08/',
+    },
+    {
+      id: 3,
+      ariaLabel: 'Facebook-Neider',
+      title: 'Facebook',
+      href: 'https://www.facebook.com/neider.urbano.35',
+    },
+  ];
 
   constructor(private renderer2: Renderer2) {}
 

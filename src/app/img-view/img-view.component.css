@@ -1,12 +1,24 @@
 .container-img-view {
   text-align: center;
-  width: 400px;
+  width: 100%;
+  margin-top: 150px;
 }
 
 .container-img-view p {
   text-align: justify;
+  font-size: 13pt;
 }
 
 .img-view {
-  margin-top: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.container-img-view button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 13pt;
+  margin-top: 50px;
 }

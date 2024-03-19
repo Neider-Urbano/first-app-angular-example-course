@@ -1,0 +1,9 @@
+<div class="container-projects">
+  <div
+    *ngFor="let project of projects"
+    (click)="goToProject(project.id)"
+    id="container-project-card"
+  >
+    <app-project-card [project]="project"></app-project-card>
+  </div>
+</div>

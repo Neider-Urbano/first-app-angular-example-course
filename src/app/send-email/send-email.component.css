@@ -1,27 +1,61 @@
 .container-send-email {
-  margin-top: 40px;
+  margin-top: 100px;
 }
 
 .container-form-group {
   display: flex;
   gap: 15px;
   flex-direction: column;
+  width: 100%;
+}
+
+.container-email-info-user {
+  display: flex;
+  gap: 15px;
 }
 
 .input-user {
   display: flex;
+  width: 50%;
   justify-content: space-between;
-}
-
-.input-user label {
-  text-align: left;
-  width: 140px;
 }
 
 .input-user > input {
   width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 13pt;
+  outline: none;
+  background: #efeff0;
 }
 
 .button-login {
-  margin-top: 15px;
+  background: #088046;
+  color: #fff;
+  height: 44px;
+  font-size: 12.5pt;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-login:hover {
+  font-weight: 600;
+}
+
+.container-menssage textarea {
+  width: 100%;
+  background: #efeff0;
+  border: none;
+  border-radius: 10px;
+  height: 150px;
+  padding: 10px 15px;
+  font-size: 13pt;
+  outline: none;
+}
+
+.container-errors {
+  color: #a15830;
+  font-size: 12.5pt;
 }

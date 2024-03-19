@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { InformationService } from '../services/information.service';
-import { imgsData } from '../services/dataImgs';
-import { SocialNetworks } from '../models/socialNetworks.model';
+import { Clipboard } from '@angular/cdk/clipboard';
 
 @Component({
   selector: 'app-home',
@@ -12,31 +10,10 @@ import { SocialNetworks } from '../models/socialNetworks.model';
 export class HomeComponent {
   public priceExpect: number = 4000000;
 
-  socialNetworks: SocialNetworks = [
-    {
-      id: 1,
-      ariaLabel: 'GitHub-Neider',
-      title: 'GitHub',
-      href: 'https://github.com/Neider-Urbano',
-    },
-    {
-      id: 2,
-      ariaLabel: 'LinkedIn-Neider',
-      title: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/neiderurbano08/',
-    },
-  ];
-
   constructor(
-    private router: Router,
+    private clipboard: Clipboard,
     private informationService: InformationService
   ) {}
-
-  imgs = imgsData;
-
-  goToImg(id: number): void {
-    this.router.navigate(['/img', id]);
-  }
 
   get information(): string | undefined {
     const career = this.informationService.information.find(
@@ -44,5 +21,10 @@ export class HomeComponent {
     );
 
     return career?.value;
+  }
+
+  copyEmail(): void {
+    this.clipboard.copy('jjuly8julianur@gmail.com');
+    alert('¡Copied Email!');
   }
 }

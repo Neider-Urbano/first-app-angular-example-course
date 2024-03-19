@@ -1,18 +1,112 @@
 .container-about-me {
-  text-align: center;
-  width: 400px;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  margin-top: 150px;
 }
 
-.container-about-me p {
+.container-info-me p {
   text-align: justify;
+  color: #666666;
+  font-size: 12.5pt;
+  margin-top: 40px;
 }
 
-.container-projects {
-  margin-top: 50px;
+.container-info-me h2 {
+  margin: 0px;
+  font-size: 18pt;
 }
 
-.container-api-buttons {
+.container-info-me h2:nth-child(2) {
+  color: #666666;
+}
+
+.container-img-personal {
+  width: 200px;
+  height: 200px;
+}
+
+.container-img-personal img {
+  border-radius: 10px;
+  height: 100%;
+}
+
+.container-info-details {
+  margin-top: 80px;
+}
+
+.container-info-details h3 {
+  font-size: 14pt;
+  font-weight: 400;
+}
+
+.container-info-details table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+}
+
+.container-info-details table td {
+  background: #efeff0;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 12.5pt;
+  display: flex;
+  align-items: center;
+}
+
+.container-info-details table td svg {
+  height: 35px;
+  width: 35px;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.container-experience {
+  margin-top: 80px;
+}
+
+.container-education {
+  margin-top: 40px;
+}
+
+.container-experience > h3,
+.container-education > h3 {
+  font-size: 14pt;
+  font-weight: 400;
+}
+
+.table-experience,
+.table-education {
+  color: #666666;
+}
+
+.table-experience tr,
+.table-education tr {
+  vertical-align: top;
+  text-align: left;
+}
+
+.table-experience tr td:nth-child(1),
+.table-education tr td:nth-child(1) {
+  width: 250px;
+}
+
+.table-experience tr td h4,
+.table-education tr td h4 {
+  margin: 0;
+  font-size: 13pt;
+  font-weight: 500;
+}
+
+.table-experience tr td h5,
+.table-education tr td h5 {
+  font-size: 13pt;
+}
+
+.table-experience tr td h6,
+.table-education tr td h6 {
+  font-size: 12pt;
 }

@@ -16,10 +16,14 @@ export class ApiInterceptor implements HttpInterceptor {
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    console.log('heelo');
-    this.loadingService.loadingShow();
-    return next
-      .handle(req)
-      .pipe(finalize(() => this.loadingService.loadingHide()));
+    if (req.method === 'GET') {
+      console.log('Intercept Api Dog y Movie');
+      this.loadingService.loadingShow();
+      return next
+        .handle(req)
+        .pipe(finalize(() => this.loadingService.loadingHide()));
+    } else {
+      return next.handle(req);
+    }
   }
 }
