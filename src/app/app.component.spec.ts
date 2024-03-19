@@ -5,6 +5,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AngularHooksComponent } from './angular-hooks/angular-hooks.component';
+import { NetworksLogoHeaderComponent } from './networks-logo-header/networks-logo-header.component';
 
 describe('AppComponent', () => {
   beforeEach(() =>
@@ -15,6 +16,7 @@ describe('AppComponent', () => {
         HeaderComponent,
         NavbarComponent,
         AngularHooksComponent,
+        NetworksLogoHeaderComponent,
       ],
     })
   );
@@ -37,7 +39,7 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(
       compiled.querySelector('footer .text-footer')?.textContent
-    ).toContain('Mi portafolio digital hecho con la tecnologia Angular');
+    ).toContain('Construido en Angular');
   });
 });
 
@@ -53,6 +55,7 @@ describe('AppComponent', () => {
         HeaderComponent,
         NavbarComponent,
         AngularHooksComponent,
+        NetworksLogoHeaderComponent,
       ],
     }).compileComponents();
   });
@@ -68,8 +71,9 @@ describe('AppComponent', () => {
   });
 
   it('should have the default message', () => {
-    const messageElement =
-      fixture.debugElement.nativeElement.querySelector('.my-curriculum');
-    expect(messageElement.textContent).toContain('My Curriculum');
+    const messageElement = fixture.debugElement.nativeElement.querySelector(
+      '.parrafo-mi-portafolio-web'
+    );
+    expect(messageElement.textContent).toContain('Mi portafolio web');
   });
 });
